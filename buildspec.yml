@@ -1,0 +1,6 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - docker-compose up -d
+      - docker-compose exec app bundle exec rake db:setup db:migrate
